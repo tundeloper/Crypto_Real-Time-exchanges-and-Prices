@@ -2,8 +2,12 @@ import {Button, Container, Typography, Grid} from "@mui/material"
 import InputeAmount from "./components/InputeAmount"
 import SelectCountary from "./components/SelectCountary"
 import SwitchCurrency from "./components/SwitchCurrency"
+import { useState } from "react"
 
 function App() {
+
+  const [fromCurrency, setFromCurrency] = useState()
+  const [tomCurrency, settomCurrency] = useState()
 
   const StyleBox = {
     background:"#fdfdfd",
