@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const countries = (url) => {
+export const useCountries = (url) => { 
     const [countriesData, setCountriesData] = useState([]);
     const [error, setError] = useState(null);
     const [loaded, setLoaded] = useState(false);
@@ -11,9 +11,11 @@ const countries = (url) => {
             try {
                 setLoaded(true);
                 const response = await axios(url);
+                console.log("API Response:", response.data)
                 setCountriesData(response.data);
             } catch (error) {
                 setError(error);
+                console.log("API Error:", error)
             } finally {
                 setLoaded(false);
             }
@@ -25,4 +27,4 @@ const countries = (url) => {
     return [countriesData, error, loaded];
 };
 
-export default countries;
+export default useCountries
