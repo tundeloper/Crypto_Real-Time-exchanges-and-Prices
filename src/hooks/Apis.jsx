@@ -11,7 +11,6 @@ export const useCountries = (url) => {
             try {
                 setLoaded(true);
                 const response = await axios(url);
-                console.log("API Response:", response.data)
                 setCountriesData(response.data);
             } catch (error) {
                 setError(error);
