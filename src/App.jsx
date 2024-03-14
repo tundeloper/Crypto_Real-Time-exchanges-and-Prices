@@ -7,7 +7,7 @@ import { useState } from "react"
 function App() {
 
   const [fromCurrency, setFromCurrency] = useState()
-  const [tomCurrency, settomCurrency] = useState()
+  const [toCurrency, setTomCurrency] = useState()
 
   const StyleBox = {
     background:"#fdfdfd",
