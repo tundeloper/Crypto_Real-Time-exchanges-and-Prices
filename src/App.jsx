@@ -2,9 +2,9 @@ import {Container, Typography, Grid} from "@mui/material"
 import InputeAmount from "./components/InputeAmount"
 import SelectCountary from "./components/SelectCountary"
 import SwitchCurrency from "./components/SwitchCurrency"
-import { useContext} from "react"
-import CurrencyContext from "./contxt/currencyContex"
-
+import {useContext} from "react"
+import { CurrencyContext } from "./contxt/currencyContex"
+// import wrong thing from currency context 
 
 function App() {
 
