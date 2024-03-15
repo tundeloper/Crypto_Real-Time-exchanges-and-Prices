@@ -1,11 +1,16 @@
 import {Grid, Button} from "@mui/material"
-import { useState } from "react"
+import {  useContext } from "react"
 // import  compare from "../17139671571638266564-128.png"
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import  { CurrencyContext } from "../contxt/currencyContex";
 
 const SwitchCurrency = () => {
-   const [fromCurrency, setFromCurrency] = useState()
-   const [toCurrency, setToCurrency] = useState()
+
+const { 
+    fromCurrency, 
+    setFromCurrency, 
+    toCurrency, 
+    setToCurrency } = useContext(CurrencyContext);
 
    const handleSwich = () => {
     setFromCurrency(toCurrency)
@@ -17,7 +22,6 @@ const SwitchCurrency = () => {
                 boderRadius: 1,
                 height: "%100"
             }}>
-                {/* {"Icon"} */}
             <CompareArrowsIcon sx={{fontSize: 30}}/>
             </Button>
         </Grid>

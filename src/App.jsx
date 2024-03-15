@@ -2,18 +2,14 @@ import {Container, Typography, Grid} from "@mui/material"
 import InputeAmount from "./components/InputeAmount"
 import SelectCountary from "./components/SelectCountary"
 import SwitchCurrency from "./components/SwitchCurrency"
-import {  useState} from "react"
-// import CurrencyContext from "./contxt/currencyContex"
+import { useContext} from "react"
+import CurrencyContext from "./contxt/currencyContex"
 
 
 function App() {
 
 
-  const [fromCurrency, setFromCurrency] = useState("🇺🇲 USD United States Minor Outlying Islands");
-  const [toCurrency, setToCurrency] = useState("🇳🇬 NGN Nigeria");
-  // const { fromCurrency, setFromCurrency, toCurrency, setToCurrency } = useContext(CurrencyContext);
-
-
+  const { fromCurrency, setFromCurrency, toCurrency, setToCurrency } = useContext(CurrencyContext);
 
   const StyleBox = {
     background: "#fdfdfd",
@@ -26,6 +22,7 @@ function App() {
     boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)",
     position: "relative"
   };
+  
 
   return (
     <Container maxWidth="md" sx={StyleBox}>

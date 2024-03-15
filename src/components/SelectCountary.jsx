@@ -4,6 +4,7 @@ import {Grid, Autocomplete, TextField, Skeleton} from "@mui/material"
 const SelectCountry = (props) => {
     const {value, setValue, label} = props;
     const [countriesData, error, loaded] = useCountries("https://restcountries.com/v3.1/all");
+    console.log(countriesData)
 
     if(loaded){
         return(
@@ -30,6 +31,7 @@ const SelectCountry = (props) => {
         <Grid item xs={12} md={3}>
             <Autocomplete
                 value={value}
+                disableClearable
                 onChange={(event, newValue) => {
                     setValue(newValue)
                 }}
